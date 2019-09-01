@@ -57,9 +57,11 @@ print(img_url)
 for l in img_url:
     url = l['src']
     r = requests.get(url, stream=True)
+    print(url)
     image_name = url.split('/')[-1]
-    with open('./img/%s' % image_name, 'wb') as f:
-        for chunk in r.iter_content(chunk_size=128):
-            f.write(chunk)
-        print('Save %s' % image_name)
+    print(image_name)
+    # with open('./img/%s' % image_name, 'wb') as f:
+    #     for chunk in r.iter_content(chunk_size=128):
+    #         f.write(chunk)
+    #     print('Save %s' % image_name)
 # print(img_url)
