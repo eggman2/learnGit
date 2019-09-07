@@ -6,3 +6,10 @@ if a == 1:
     print('s')
     if a == 1:
         print('sd')
+
+a=20
+b=31231
+a^=b
+b^=a
+a^=b
+print(a,b)
